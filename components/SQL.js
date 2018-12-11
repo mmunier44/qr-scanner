@@ -17,7 +17,7 @@ export default class SQL {
       tx => {
         tx.executeSql(`insert into ${tableName} (value, date) values (?,?)`,[
           text,
-          new Date().touTCString()
+          new Date().toUTCString()
         ])
       },
       null,
@@ -28,7 +28,7 @@ export default class SQL {
   static GetQRS = () => {
     return new Promise((resolve, reject) => {
       db.transaction(async tx => {
-        await.tx.executeSql(
+        await tx.executeSql(
           `select * from ${tableName} order by id DESC`,
           null,
           (_, {rows: { _array } }) => {
