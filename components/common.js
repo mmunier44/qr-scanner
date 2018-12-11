@@ -13,7 +13,7 @@ export const Message = props => {
           style={{
             flex: 1,
             height: screenHeight,
-            justifyContent: "center"
+            justifyContent: "center",
             alignItems: "center"
           }}
         >
